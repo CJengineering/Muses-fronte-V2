@@ -25,8 +25,6 @@ import {
   createPresentationSelectedRows
 } from 'src/store/presentation/createPresentation'
 import toast from 'react-hot-toast'
-import { padding } from '@mui/system'
-
 
 export default function ActionSelector() {
   function findArticleById(articles: RowNewProps[], idToFind: number): Post | null {
@@ -49,7 +47,7 @@ export default function ActionSelector() {
     dispatch(actionSelected(event.target.value as ActionStatus))
   }
   const handleBulkArchive = async () => {
-    toast.success(`Your content item was successfully ${actionStatus.status}ed`);
+    toast.success(`Your content item was successfully ${actionStatus.status}ed`)
     presentationBulk.selectedRows.forEach(async item => {
       if (actionStatus.status == 'archive') {
         await updateArchive(item)
@@ -76,19 +74,17 @@ export default function ActionSelector() {
     dispatch(filterStateChanged(false))
     dispatch(clearSelectedRows())
   }
-  console.log("selected rows In action selector",presentationBulk.selectedRows)
+  console.log('selected rows In action selector', presentationBulk.selectedRows)
   return (
     <Box
       sx={{
-       
         display: 'flex',
         columnGap: '1rem',
         alignItems: 'top',
-       marginTop:'1rem',
+        marginTop: '1rem'
       }}
     >
-   
-      <FormControl >
+      <FormControl>
         <InputLabel id='demo-simple-select-label'>Action</InputLabel>
         <Select
           labelId='demo-simple-select-label'
@@ -106,10 +102,7 @@ export default function ActionSelector() {
       <Button
         onClick={handleBulkArchive}
         variant='contained'
-        
-    
-        color ={actionStatus.status == 'archive' ? 'error' : actionStatus.status == 'shortlist' ? 'success' : 'info'}    
-     
+        color={actionStatus.status == 'archive' ? 'error' : actionStatus.status == 'shortlist' ? 'success' : 'info'}
       >
         {actionStatus.status}
       </Button>

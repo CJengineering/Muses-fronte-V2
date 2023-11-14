@@ -30,7 +30,7 @@ const ListKeywordInfo: React.FC<ListKeywordInfoProps> = ({ relatedKeywords }) =>
        </Typography>
       {Object.entries(relatedKeywords).map(([keyword, value]) =>
         value > 0 ? (
-          <Box component='ul' sx={{ p: 0, backgroundColor: 'inherit' }}>
+          <Box component='ul'key={keyword} sx={{ p: 0, backgroundColor: 'inherit' }}>
             <ListItem>
               <ListItemText primary={`${keyword}   ${value} times`} />
             </ListItem>

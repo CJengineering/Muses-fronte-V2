@@ -78,8 +78,8 @@ export const createPresentationPosts = (state: RootState): RowNewProps[] => {
   ids.forEach((id) => {
     const post = posts[id];
 
-    let source: IconType;
-    source = post.source as IconType;
+   
+   const source = post.source as IconType;
 
     presentationPosts.push({
       id: post.id,

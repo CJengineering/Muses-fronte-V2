@@ -8,7 +8,6 @@ import { PricingPlanType } from 'src/@core/components/plan-details/types'
 import CurrentPlanCard from 'src/views/pages/account-settings/billing/CurrentPlanCard'
 import PaymentMethodCard from 'src/views/pages/account-settings/billing/PaymentMethodCard'
 import BillingAddressCard from 'src/views/pages/account-settings/billing/BillingAddressCard'
-import BillingHistoryTable from 'src/views/pages/account-settings/billing/BillingHistoryTable'
 
 const TabBilling = ({ apiPricingPlanData }: { apiPricingPlanData: PricingPlanType[] }) => {
   return (
@@ -26,7 +25,7 @@ const TabBilling = ({ apiPricingPlanData }: { apiPricingPlanData: PricingPlanTyp
       </Grid>
 
       <Grid item xs={12}>
-        <BillingHistoryTable />
+       
       </Grid>
     </Grid>
   )

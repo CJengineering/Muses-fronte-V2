@@ -1,9 +1,9 @@
 import { Article, ArticleGateway } from 'src/app/interfaces';
-import { TableStatus } from 'src/features/table/tableSlice';
+
 
 export  class ApiArticleGateway implements ArticleGateway {
   async fetchArticles(): Promise<Article[]> {
-    let id = 1;
+
     const response = await fetch(`https://new-alerts-e4f6j5kdsq-ew.a.run.app/articles`);
     const data: any = await response.json();
     return data;

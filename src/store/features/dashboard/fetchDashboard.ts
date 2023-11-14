@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { AnyAction, Dispatch, ThunkAction } from '@reduxjs/toolkit';
-import { AppState } from 'src/app/store';
-import { articlesFetched } from 'src/features/articles/articlesSlice';
-import { TableStatus } from 'src/features/table/tableSlice';
 import { DashBoardGateway } from 'src/app/interfaces';
-import { dashboardFetched } from 'src/features/dashboard/dashboardSlice';
+import { AppState } from 'src/store';
+import { dashboardFetched } from './dashboardSlice';
 
 type ThunkResult<D> = ThunkAction<void, AppState, D, AnyAction>;
 
