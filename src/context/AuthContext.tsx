@@ -17,7 +17,7 @@ import { id } from 'date-fns/locale'
 // ** Defaults
 const defaultProvider: AuthValuesType = {
   user: null,
-  loading: true,
+  loading: false,
   setUser: () => null,
   setLoading: () => Boolean,
   login: () => Promise.resolve(),
@@ -75,7 +75,7 @@ const AuthProvider = ({ children }: Props) => {
     const initAuth = async (): Promise<void> => {
       const storedToken = window.localStorage.getItem('userData')!
       if (storedToken) {
-        setLoading(false)
+        setLoading(true)
         console.log('the stored token',storedToken)
         const userData: UserDataType = {
           id: 2,
@@ -120,7 +120,7 @@ const AuthProvider = ({ children }: Props) => {
       })
   }
   const handleLogin2 = async (params: LoginParams, errorCallback?: ErrCallbackType) => {
-    setLoading(true); 
+    setLoading(false); 
     try {
      
       const response = await axios.post('https://new-alerts-e4f6j5kdsq-ew.a.run.app/users/tokens/sign_in', {
