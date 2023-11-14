@@ -1,0 +1,121 @@
+html,
+body {
+  min-height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+code {
+  font-family: 'Inter', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  padding: 0.1rem 0.4rem;
+  font-size: 90%;
+  color: #d400ff;
+  border-radius: 0.1335rem;
+}
+code:not([class*='language-']):before,
+code:not([class*='language-']):after {
+  content: '`';
+}
+code[class*='language-'] {
+  padding: 0;
+}
+.icon{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease; 
+}
+.iconContainer{
+display: flex;
+justify-content: center;
+align-content: center;
+
+}
+.iconBing{
+display: flex;
+justify-content: center;
+
+margin-left: 5px;
+width: 20px;
+height: 20px;
+cursor: pointer;
+transition: color 0.3s ease; 
+}
+.icon:hover{
+  fill: blue;
+}
+.st0 {
+  fill: #FFC107;
+}
+
+.st1 {
+  fill: #FF3D00;
+}
+
+.st2 {
+  fill: #4CAF50;
+}
+
+.st3 {
+  fill: #1976D2;
+}
+.st00 { fill: none; }
+.st01 { fill: url(#SVGID_1_); }
+.st02 { fill: url(#SVGID_00000134235633801049480360000011448221497103926169_); }
+.st03 { fill: url(#SVGID_00000078025674990654034560000013733281558047501713_); }
+.st04 { fill: url(#SVGID_00000164490689233448804050000012429620856279586467_); }
+.st5 { opacity: 0.15; fill: url(#SVGID_00000138538276470696143470000000286695958926667141_); enable-background: new; }
+.st6 { fill: url(#SVGID_00000043446594945176244020000003029068044585832381_); }
+.st7 { opacity: 0.15; fill: url(#SVGID_00000176738938347458367770000005507087223945396359_); enable-background: new; }
+.st8 { fill: url(#SVGID_00000163044484687328613230000017025306896111059100_); }
+.st9 { opacity: 0.15; fill: url(#SVGID_00000135667122225835934220000008483087948633980085_); enable-background: new; }
+.st10 { fill: url(#SVGID_00000145774075155716689940000003889098898187162259_); }
+.st11 { opacity: 0.15; fill: url(#SVGID_00000023271265728329536770000010044406878214880431_); enable-background: new; }
+.st12 { fill: url(#SVGID_00000003100995213244596630000014050234952739559317_); }
+.st13 { opacity: 0.15; fill: url(#SVGID_00000054963447702225962980000013436680327530708646_); enable-background: new; }
+.st14 { fill: url(#SVGID_00000144336227505014071450000001783830081346505371_); }
+.st15 { opacity: 0.15; fill: url(#SVGID_00000160157788613246102770000000370298032027471792_); enable-background: new; }
+.st16 { fill: url(#SVGID_00000041979080355595600120000000460514122114902411_); }
+.st17 { opacity: 0.15; fill: url(#SVGID_00000003818559616262525650000008591099818637973932_); enable-background: new; }
+.st000 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #EF7816;
+}
+
+.st001 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #F6BF26;
+}
+
+.st002 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #F6C029;
+}
+
+.st003 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #F2A600;
+}
+.cls1 {fill:#1d1d1b;}
+.cls2 {fill:#2a4b9b;}
+
+/* Add this CSS to your styles file or component */
+.MuiDataGrid-row:hover .action-column {
+  opacity: 1; /* Show the column on hover over a row with the class MuiDataGrid-row */
+}
+
+.action-column {
+  display: flex;
+  
+  justify-content: space-around;
+  width: 100%;
+  opacity: 0; /* Hide the column by default */
+  transition: opacity 0.2s; /* Add a transition effect */
+}
