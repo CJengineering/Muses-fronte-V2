@@ -65,6 +65,7 @@ const VerticalLayout = (props: LayoutProps) => {
 
   return (
     <>
+    <div> heee</div>
       <VerticalLayoutWrapper className='layout-wrapper'>
         {/* Navigation Menu */}
         {navHidden && !(navHidden && settings.lastLayout === 'horizontal') ? null : (

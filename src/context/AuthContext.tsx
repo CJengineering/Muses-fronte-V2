@@ -88,6 +88,7 @@ const AuthProvider = ({ children }: Props) => {
           avatar: null // Replace with actual avatar if available
         };
         setUser(userData)
+        setLoading(false)
       } else {
        console.log('no token found')
       }
@@ -120,7 +121,7 @@ const AuthProvider = ({ children }: Props) => {
       })
   }
   const handleLogin2 = async (params: LoginParams, errorCallback?: ErrCallbackType) => {
-    setLoading(false); 
+    setLoading(true); 
     try {
      
       const response = await axios.post('https://new-alerts-e4f6j5kdsq-ew.a.run.app/users/tokens/sign_in', {
