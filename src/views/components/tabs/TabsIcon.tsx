@@ -40,7 +40,7 @@ const TabsIcon = () => {
         <Tab value='incoming' label='Incoming' icon={<Icon icon='ep:list' />} />
         <Tab value='shortlist' label='Shortlist' icon={<Icon icon='material-symbols:thumb-up-outline' />} />
         <Tab value='published' label='Published' icon={<Icon icon='tabler:brand-webflow' />} />
-        <Tab value='archived' label='Archive' icon={<Icon icon='ic:outline-archive' />} />
+        <Tab value='archived' label='Bin' icon={<Icon icon='ic:outline-archive' />} />
       </TabList>
      
     </TabContext>

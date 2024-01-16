@@ -93,7 +93,7 @@ export default function ActionSelector() {
           label='Age'
           onChange={handleChange}
         >
-          <MenuItem value={'archive'}>Archive</MenuItem>
+          <MenuItem value={'archive'}>Bin</MenuItem>
           <MenuItem value={'shortlist'}>Shortlist</MenuItem>
           <MenuItem value={'webflow'}>Webflow</MenuItem>
           <MenuItem value={'analyse'}>Analyse</MenuItem>
