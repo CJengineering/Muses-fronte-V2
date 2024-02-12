@@ -45,7 +45,7 @@ interface PropsId {
   id: number
 }
 export default function ArticleInfo({ id }: PropsId) {
-  const [userId, setUserId] = useState<number | undefined >()
+  const [userId, setUserId] = useState<number | undefined>()
 
   const [errorMessage, setErrorMessage] = useState<boolean>(false)
   const [summary, setSummary] = useState<string>('')
@@ -77,12 +77,12 @@ export default function ArticleInfo({ id }: PropsId) {
       try {
         console.log('id', id)
         const userDataString = localStorage.getItem('userData')
-        
+
         if (userDataString) {
           const userData = JSON.parse(userDataString)
-          
+
           const id = userData ? userData.id : null
-          
+
           setUserId(id)
         }
         const response = await fetch(`https://new-alerts-e4f6j5kdsq-ew.a.run.app/posts/${id}`)
@@ -144,9 +144,13 @@ export default function ArticleInfo({ id }: PropsId) {
   }
   return (
     <>
-      <div >
+      <div>
         <ListKeywordInfo relatedKeywords={relatedKeywords} />
         <div>
+          <div>
+            <h6>Summary</h6>
+            <p>{summary}</p>
+          </div>
           <div>
             {dataApi && dataApi.comments && (
               <Paper elevation={3} style={{ padding: '20px', marginTop: '20px' }}>
@@ -163,47 +167,46 @@ export default function ArticleInfo({ id }: PropsId) {
                 ) : null}
                 <List>
                   {dataApi.comments.map(comment => (
-           <React.Fragment key={comment.id}>
-           <ListItem alignItems="flex-start">
-             <ListItemText
-               primary={
-                 <>
-                   <Typography
-                     component="span"
-                     variant="subtitle1"
-                     color="textPrimary"
-                     style={{ fontWeight: 'bold' }}
-                   >
-                     {userName(comment.user_id)}
-                   </Typography>
-                   <Typography
-                     component="span"
-                     variant="body2"
-                     style={{ display: 'block', marginTop: '8px' }}
-                   >
-                     {comment.body}
-                   </Typography>
-                 </>
-               }
-               secondary={
-                 <Typography
-                   component="span"
-                   variant="caption"
-                   color="textSecondary"
-                 >
-                   Commented on: {new Date(comment.created_at).toLocaleDateString('en-US', { month: '2-digit', day: '2-digit' })}
-                 </Typography>
-               }
-             />
-           </ListItem>
-           <Divider variant="inset" component="li" />
-         </React.Fragment>
+                    <React.Fragment key={comment.id}>
+                      <ListItem alignItems='flex-start'>
+                        <ListItemText
+                          primary={
+                            <>
+                              <Typography
+                                component='span'
+                                variant='subtitle1'
+                                color='textPrimary'
+                                style={{ fontWeight: 'bold' }}
+                              >
+                                {userName(comment.user_id)}
+                              </Typography>
+                              <Typography
+                                component='span'
+                                variant='body2'
+                                style={{ display: 'block', marginTop: '8px' }}
+                              >
+                                {comment.body}
+                              </Typography>
+                            </>
+                          }
+                          secondary={
+                            <Typography component='span' variant='caption' color='textSecondary'>
+                              Commented on:{' '}
+                              {new Date(comment.created_at).toLocaleDateString('en-US', {
+                                month: '2-digit',
+                                day: '2-digit'
+                              })}
+                            </Typography>
+                          }
+                        />
+                      </ListItem>
+                      <Divider variant='inset' component='li' />
+                    </React.Fragment>
                   ))}
                 </List>
               </Paper>
             )}
           </div>
-         
 
           <CommentForm userId={userId} articleId={id} onCommentAdded={fetchComments} />
         </div>
